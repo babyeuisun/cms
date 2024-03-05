@@ -1,0 +1,149 @@
+###상품추가
+POST http://localhost:8082/seller/product
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5NTM0OTQxLCJleHAiOjE3MDk3MDc3NDF9.z9iHzY8wp7oJfRdTjXQwP_dRE-6RDoFOyvAQyi9Fda0
+
+{
+  "description": "상품설명",
+  "items": [
+    {
+      "count": 1,
+      "name": "270",
+      "price": 100000
+    }
+  ],
+  "name": "에어포스"
+}
+###상품아이템추가
+POST http://localhost:8082/seller/product/item
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5NTM0OTQxLCJleHAiOjE3MDk3MDc3NDF9.z9iHzY8wp7oJfRdTjXQwP_dRE-6RDoFOyvAQyi9Fda0
+
+
+    {
+      "productId" : 1,
+      "count": 1,
+      "name": "280",
+      "price": 100000
+    }
+
+
+###상품수정
+PUT http://localhost:8082/seller/product
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5MjY1NzczLCJleHAiOjE3MDkzNTIxNzN9.S0yb_mO138et4kh_2P-5YUMzoib4hxB64AsDfeAnCFk
+
+{
+  "description": "상품설명",
+  "items": [
+    {
+      "id" : 3,
+      "count": 1,
+      "name": "280",
+      "price": 100000
+    }
+  ],
+  "id" : 3 ,
+  "name": "에어포스 한정판"
+}
+###상품아이템수정
+PUT http://localhost:8082/seller/product/item
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5NTM0OTQxLCJleHAiOjE3MDk3MDc3NDF9.z9iHzY8wp7oJfRdTjXQwP_dRE-6RDoFOyvAQyi9Fda0
+
+
+{
+  "id" : 4,
+  "name": "280",
+  "count": 1,
+  "price": 100000
+}
+###상품삭제
+DELETE http://localhost:8082/seller/product?id=1
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5NTM0OTQxLCJleHAiOjE3MDk3MDc3NDF9.z9iHzY8wp7oJfRdTjXQwP_dRE-6RDoFOyvAQyi9Fda0
+
+{
+  "description": "상품설명",
+  "items": [
+    {
+      "id" : 1,
+      "count": 1,
+      "name": "280",
+      "price": 100000
+    }
+  ],
+  "id" : 1,
+  "name": "에어포스"
+}
+
+###상품아이템삭제
+DELETE http://localhost:8082/seller/product/item/id=2
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5MjY1NzczLCJleHAiOjE3MDkzNTIxNzN9.S0yb_mO138et4kh_2P-5YUMzoib4hxB64AsDfeAnCFk
+
+
+###상품검색
+GET http://localhost:8082/search/product?name=에어포스
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5MjY1NzczLCJleHAiOjE3MDkzNTIxNzN9.S0yb_mO138et4kh_2P-5YUMzoib4hxB64AsDfeAnCFk
+
+###상품 디테일검색
+GET http://localhost:8082/search/product/detail?productId=1
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5MjY1NzczLCJleHAiOjE3MDkzNTIxNzN9.S0yb_mO138et4kh_2P-5YUMzoib4hxB64AsDfeAnCFk
+
+###상품카트추가
+POST http://localhost:8082/customer/cart
+content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzA5NTM0OTQxLCJleHAiOjE3MDk3MDc3NDF9.z9iHzY8wp7oJfRdTjXQwP_dRE-6RDoFOyvAQyi9Fda0
+
+{
+  "description": "상품설명",
+  "id" : 1,
+  "items": [
+    {
+      "count": 1,
+      "id" : 1,
+      "name": "270",
+      "price": 100000
+    }
+  ],
+  "name": "에어포스",
+  "sellerId" : 1
+}
+
+
+### 카트조회
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDk1Mzg1OTUsImV4cCI6MTcwOTcxMTM5NX0.h1vZ1iyGGmdZZo5pfjO7erkowBzh_Sn3BNrTSN1FW6Y
+
+### 카트주문
+POST http://localhost:8082/customer/cart/order
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDk1Mzg1OTUsImV4cCI6MTcwOTcxMTM5NX0.h1vZ1iyGGmdZZo5pfjO7erkowBzh_Sn3BNrTSN1FW6Y
+
+{
+  "customerId": 1,
+  "products": [
+    {
+      "id": 1,
+      "sellerId": 1,
+      "name": "에어포스",
+      "description": "상품설명",
+      "items": [
+        {
+          "id": 1,
+          "name": "270",
+          "count": 1,
+          "price": 150000
+        }
+      ]
+    }
+  ],
+  "messages": [
+    "에어포스상품의 변동사항 :에어포스가격이 변경되었습니다  , "
+  ]
+}
+}

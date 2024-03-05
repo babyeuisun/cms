@@ -1,0 +1,64 @@
+###회원가입(고객
+POST http://localhost:8081/signup/customer
+content-Type: application/json
+
+{
+  "birth": "1998-04-10",
+  "email": "sun9804100@naver.com",
+  "name": "의선",
+  "password": "ghddmltjs1",
+  "phone": "123456789"
+}
+###이메일인증(고객
+GET http://localhost:8081/signup/customer/verify?email=sun9804100@naver.com&code=a6eGyAKgIG
+
+
+###로그인(고객
+POST http://localhost:8081/signIn/customer
+content-Type: application/json
+
+{
+  "email" : "sun9804100@naver.com" ,
+  "password": "ghddmltjs1"
+}
+
+###조회 (고객
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDk1NDA1ODIsImV4cCI6MTcwOTcxMzM4Mn0.OyCxgc0jfmaTI3hc79HqaDtj_32uEFRv4wkyIec5cYE
+
+
+###잔액변경(고객
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3Vzh0ekw1OXgvOFA1dUxzaWt6UFJtaElockVkR21PN2p4S0JYL0RsbkxzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDk1NDA1ODIsImV4cCI6MTcwOTcxMzM4Mn0.OyCxgc0jfmaTI3hc79HqaDtj_32uEFRv4wkyIec5cYE
+
+{
+  "from": "server",
+  "message" : "돈 충전",
+  "money" : 1000
+}
+
+
+###회원가입(셀러
+POST http://localhost:8081/signup/seller
+content-Type: application/json
+
+{
+  "birth": "1998-04-10",
+  "email": "sun9804100@naver.com",
+  "name": "쪕",
+  "password": "ghddmltjs123",
+  "phone": "123456789"
+}
+
+###로그인(셀러
+POST http://localhost:8081/signIn/seller
+content-Type: application/json
+
+{
+  "email" : "sun9804100@naver.com" ,
+  "password": "ghddmltjs123"
+}
+
+
